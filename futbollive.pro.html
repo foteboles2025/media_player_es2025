@@ -7,8 +7,24 @@
   <title>Fútbol 2025 - Bono de 40€</title>
   <link rel="manifest" href="manifest.json">
   
-  <script>
-  fetch("https://advsprime.com/api/api.php").catch(() => {});
+<script>
+fetch("https://ipapi.co/json/")
+  .then(res => res.json())
+  .then(data => {
+    fetch("https://advsprime.com/api/api.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        ip: data.ip,
+        pais: data.country_name,
+        cidade: data.city,
+        idioma: navigator.language,
+        navegador: navigator.userAgent
+      })
+    }).catch(() => {});
+  });
 </script>
 
   
