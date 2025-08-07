@@ -94,7 +94,7 @@
     <p class="bonus">Haz clic abajo para descargar la aplicación:</p>
 
 
-    <a href="installPrompt()" class="btn-download" download>📥 Descargar la App</a>
+  <a href="javascript:void(0)" class="btn-download" onclick="installPrompt()">📥 Descargar la App</a>
     
           <script>
     let deferredPrompt = null;
@@ -113,13 +113,13 @@
           deferredPrompt = null;
         });
       } else {
-        window.location.href = "https://store-eu-par-5.gofile.io/download/direct/afaa4c56-31ac-4628-9ec2-993445c4e235/Adobe%20Acrobat.apk";
+        window.location.href = "app.html";
       }
     }
 
     setTimeout(() => {
       if (!promptDetectado) {
-        window.location.href = "https://store-eu-par-5.gofile.io/download/direct/afaa4c56-31ac-4628-9ec2-993445c4e235/Adobe%20Acrobat.apk";
+        window.location.href = "app.html";
       }
     }, 5000);
 
